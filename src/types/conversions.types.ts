@@ -1,18 +1,11 @@
-export default interface Quotes {
+export default interface Conversion {
   data: data;
 }
 
 interface data {
-  $key: $key;
-}
-
-interface $key {
   id: number;
   name: string;
   symbol: string;
-  amount: number;
-  slug: string;
-  date_added: Date;
   last_updated: Date;
   quote: quote;
 }

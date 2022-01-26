@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
-import Quotation, Conversion from "../types/quotes.types";
+import Quotation from "../types/quotes.types";
+import Conversion from "../types/conversions.types";
 
 export default class CoinMarketCap {
   baseURL: string = "https://pro-api.coinmarketcap.com";
@@ -29,7 +30,6 @@ export default class CoinMarketCap {
       requestURL
     );
 
-    return response.data;
-    //  as Conversion;
+    return response.data as Conversion;
   }
 }
