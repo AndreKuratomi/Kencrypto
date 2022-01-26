@@ -21,10 +21,28 @@ export default class CoinMarketCap {
       requestURL
     );
 
+    // "Your parsing code should explicitly parse only the response properties you require to guarantee new fields that may be returned in the future are ignored."
+
+    // const quotesResponseModel = {
+    //   data: {
+    //     id: 1,
+    //     symbol: "BTC",
+    //     name: "Bitcoin",
+    //     amount: 25.67,
+    //     last_updated: "2021-08-26T18:30:17.000Z",
+    //     quote: {
+    //       ETH: {
+    //         price,
+    //         last_updated,
+    //       },
+    //     },
+    //   },
+    // };
+
     return response.data as Quotation;
   }
 
-  async conversion(amount: number, symbol: string, convert: string[]) {
+  async conversions(amount: number, symbol: string, convert: string[]) {
     const requestURL = `/v1/tools/price-conversion?amount=${amount}&symbol=${symbol}&convert=${convert}`;
     const response: AxiosResponse<any, any> = await this.axiosInstance.get(
       requestURL

@@ -14,6 +14,16 @@ interface $key {
   slug: string;
   date_added: Date;
   last_updated: Date;
+  // tags: null;
+  // max_supply: null;
+  // circulating_supply: null;
+  // total_supply: null;
+  // is_active: null;
+  // platform: null;
+  // cmc_rank: null;
+  // is_fiat: null;
+  // self_reported_circulating_supply: null;
+  // self_reported_market_cap: null;
   quote: quote;
 }
 
