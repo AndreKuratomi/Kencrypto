@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
+import Quotation, Conversion from "../types/quotes.types";
 
 export default class CoinMarketCap {
   baseURL: string = "https://pro-api.coinmarketcap.com";
@@ -19,8 +20,7 @@ export default class CoinMarketCap {
       requestURL
     );
 
-    return response.data;
-    //  as Quotation;
+    return response.data as Quotation;
   }
 
   async conversion(amount: number, symbol: string, convert: string[]) {
