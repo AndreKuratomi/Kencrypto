@@ -91,9 +91,9 @@ yarn dev
 
 <h4>Cotação atual</h4>
 
-Listagem das cotações pedidas para dólar americano (Método GET): <b>/v1/cryptocurrency/quotes/latest?symbol=${</b>symbols*<b>}\</b> (ou https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${symbols\*})
+Listagem das cotações pedidas para dólar americano (Método GET): <b>/v1/cryptocurrency/quotes/latest?symbol=${</b>symbols*<b>}</b> (ou https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${symbols\*})
 
-\*preencher com uma ou mais cotações separadas por vírgulas sem espaços.
+\* Preencher com uma ou mais cotações separadas por vírgulas sem espaços.
 
 Exemplo a ser colocado no body da requisição:
 
@@ -130,9 +130,9 @@ Status: 200 OK
 
 <h4>Conversão de preços:</h4>
 
-Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${</b>amount**<b>}&convert=${</b>convert**<b>}&symbol=${</b>symbol**<b>}</b> (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount**}&convert=${convert**}&symbol=${symbol**} \*\*)
+Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${</b>amount**<b>}&convert=${</b>convert**<b>}&symbol=${</b>symbol**<b>}</b> (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount**}&convert=${convert**}&symbol=${symbol**})
 
-\*\*Preencher com espectivamente, o valor para ser cotado, a cotação original e a cotação de conversão.
+\*\* Preencher com, respectivamente, o valor para ser cotado, a cotação original e a cotação de conversão.
 
 Exemplo a ser colocado no body da requisição:
 
