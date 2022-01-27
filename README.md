@@ -172,7 +172,7 @@ Status: 200 OK
 # Referências
 
 - [Typescript](https://www.typescriptlang.org/)
-- [NPM](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
 - [CoinMarketCap](https://coinmarketcap.com/api/)
   - [QuotesLatest](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyQuotesLatest)
   - [Price Conversion](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ToolsPriceconversion)
