@@ -10,16 +10,16 @@
 
 # Descrição
 
-<p>A aplicação <b>KenCrypto</b> consiste na verdade numa biblioteca que facilita o acesso à <b>[API CoinMarketCap](https://coinmarketcap.com/api/)</b>. Esta biblioteca não demanda a informação de nenhuma URL pois suas informações podem ser obtidas diretamente por meio de funções.</p>
+<p>A aplicação <b>KenCrypto</b> consiste na elaboração uma biblioteca que facilita o acesso à <b>[API CoinMarketCap](https://coinmarketcap.com/api/)</b>. Esta biblioteca não demanda a informação de nenhuma URL pois suas informações podem ser obtidas diretamente por meio de funções.</p>
 
-<p>Esta biblioteca é um serviço simples de listagem da cotação atual de uma moeda e conversão entre moedas. Esta aplicação utiliza o ambiente de execução Node.js e o framework Express.js.</p>
+<p>Esta biblioteca é um serviço simples de listagem da cotação atual de uma moeda e conversão entre cotações. Esta aplicação utilizou em sua produção a linguagem Typescript.</p>
 <br>
 
 # Instalação
 
 <h3>Criação de chave CoinMarketCap</h3>
 
-<p>Primeiramente, é preciso criar uma chave de api no <b>[CoinMarketCap](https://coinmarketcap.com/api/)</b>. Escolher o plano gratuito que possibilita fazer <b>300 request por dia</b>, o suficiente para o uso.</p>
+<p>Primeiramente, é preciso criar uma chave de api no <b>[CoinMarketCap](https://pro.coinmarketcap.com/signup)</b>. Escolher o plano gratuito que possibilita fazer <b>300 requests por dia</b>.</p>
 
 <p><b>Obs:</b> Esta chave só será necessária na hora de instanciar a classe (ou, em outras palavras, "gerar um produto da classe") coinMarketCap e na inserção no header de um API Client.</p>
 
@@ -84,17 +84,15 @@ npm i kencrypto0
 yarn dev
 ```
 
-<p>A aplicação rodará com o <b>localhost:3000</b>. Adicionar depois deste as rotas e suas terminações, ou <b>endpoints</b>, que veremos a seguir.</p>
+<p>A aplicação rodará com a URL de base <b>https://pro-api.coinmarketcap.com</b>. Adicionar depois deste as rotas e suas terminações, ou <b>endpoints</b>, que veremos a seguir.</p>
 
 <p>Após o CLI rodar de modo bem sucedido com o API Client aberto vamos utilizar as seguintes rotas:</p>
 
 <h3>Rotas Kencrypto</h3>
 
-<p>URL de base: "https://pro-api.coinmarketcap.com"</p>
-
 <h4>Cotação atual</h4>
 
-<b>Listagem das cotações pedidas para dólar americano (Método GET): <b>/v1/cryptocurrency/quotes/latest?symbol=${symbols}\*</b> (ou https://pro-api.coinmarketcap.com/companies)
+<b>Listagem das cotações pedidas para dólar americano (Método GET): <b>/v1/cryptocurrency/quotes/latest?symbol=${</b>symbols<b>}\*</b> (ou https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${symbols})
 
 \*preencher com uma ou mais cotações separadas por vírgulas sem espaços.
 
@@ -133,7 +131,7 @@ Status: 200 OK
 
 <h4>Conversão de preços:</h4>
 
-Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${amount}&convert=${convert}&symbol=${symbol}</b>** (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount}&convert=${convert}&symbol=${symbol}\*\*)
+Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${</b>amount<b>}&convert=${</b>convert<b>}&symbol=${</b>symbol<b>}</b>** (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount}&convert=${convert}&symbol=${symbol} \*\*)
 
 \*\*Respectivamente, o valor dado, a cotação original e a cotação de conversão.
 
@@ -173,6 +171,7 @@ Status: 200 OK
 
 # Referências
 
+- [Typescript](https://www.typescriptlang.org/)
 - [NPM](https://nodejs.org/en/)
 - [CoinMarketCap](https://coinmarketcap.com/api/)
   - [QuotesLatest](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyQuotesLatest)
