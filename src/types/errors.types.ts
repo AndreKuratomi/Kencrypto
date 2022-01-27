@@ -1,9 +1,9 @@
 export default interface Error {
-  status: status;
+  status: Status;
 }
 
-interface status {
-  timestamp: Date;
+interface Status {
+  timestamp: string;
   error_code: number;
   error_message: string;
   elapsed: number;
