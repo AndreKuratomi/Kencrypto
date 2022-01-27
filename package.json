@@ -1,5 +1,5 @@
 {
-  "name": "entrega4-kencrypto0",
+  "name": "kencrypto0",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/dist/index.d.ts",
