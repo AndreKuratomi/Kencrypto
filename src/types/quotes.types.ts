@@ -1,12 +1,12 @@
 export default interface Quotes {
-  data: data;
+  data: Data;
 }
 
-interface data {
-  $key: $key;
+interface Data {
+  [name: string]: CurrencyInfo;
 }
 
-interface $key {
+interface CurrencyInfo {
   id: number;
   name: string;
   symbol: string;
@@ -14,24 +14,14 @@ interface $key {
   slug: string;
   date_added: Date;
   last_updated: Date;
-  // tags: null;
-  // max_supply: null;
-  // circulating_supply: null;
-  // total_supply: null;
-  // is_active: null;
-  // platform: null;
-  // cmc_rank: null;
-  // is_fiat: null;
-  // self_reported_circulating_supply: null;
-  // self_reported_market_cap: null;
-  quote: quote;
+  quote: Quote;
 }
 
-interface quote {
-  $key: $key;
+interface Quote {
+  USD: ConvertedValue;
 }
 
-interface $key {
+interface ConvertedValue {
   price: number;
   last_updated: Date;
 }

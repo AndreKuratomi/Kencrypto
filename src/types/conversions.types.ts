@@ -1,20 +1,20 @@
 export default interface Conversion {
-  data: data;
+  data: Data;
 }
 
-interface data {
+interface Data {
   id: number;
   name: string;
   symbol: string;
   last_updated: Date;
-  quote: quote;
+  quote: Quote;
 }
 
-interface quote {
-  $key: $key;
+interface Quote {
+  [name: string]: ConvertedValue;
 }
 
-interface $key {
+interface ConvertedValue {
   price: number;
   last_updated: Date;
 }
