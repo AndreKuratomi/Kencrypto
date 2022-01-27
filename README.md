@@ -13,8 +13,8 @@
 <p>A aplicação <b>KenCrypto</b> consiste na elaboração uma biblioteca que facilita o acesso à <b>[API CoinMarketCap](https://coinmarketcap.com/api/)</b>. Esta biblioteca não demanda a informação de nenhuma URL pois suas informações podem ser obtidas diretamente por meio de funções.</p>
 
 <p>Esta biblioteca é um serviço simples de listagem da cotação atual de uma moeda e conversão entre cotações. Esta aplicação utilizou em seu desenvolvimento a linguagem Typescript.</p>
-<br>
 
+<br>
 # Instalação
 
 <h3>Criação de chave CoinMarketCap</h3>
@@ -23,7 +23,6 @@
 
 <p><b>Obs:</b> Esta chave só será necessária na hora de instanciar a classe (ou, em outras palavras, "gerar um produto da classe") coinMarketCap e na inserção no header de um API Client.</p>
 
-<br>
 <h3>A aplicação em si</h3>
 
 <h5>0. Primeiramente, é necessário já ter instalado na própria máquina:</h5>
@@ -68,12 +67,13 @@ npm install --global yarn
 code .
 ```
 
-<br>
 <h3>Ou para apenas importar a biblioteca em outra aplicação:</h3>
 
 ```
 npm i kencrypto0
 ```
+
+<br>
 
 # Utilização
 
