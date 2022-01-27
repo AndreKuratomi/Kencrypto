@@ -12,7 +12,7 @@
 
 <p>A aplicação <b>KenCrypto</b> consiste na elaboração uma biblioteca que facilita o acesso à <b>[API CoinMarketCap](https://coinmarketcap.com/api/)</b>. Esta biblioteca não demanda a informação de nenhuma URL pois suas informações podem ser obtidas diretamente por meio de funções.</p>
 
-<p>Esta biblioteca é um serviço simples de listagem da cotação atual de uma moeda e conversão entre cotações. Esta aplicação utilizou em sua produção a linguagem Typescript.</p>
+<p>Esta biblioteca é um serviço simples de listagem da cotação atual de uma moeda e conversão entre cotações. Esta aplicação utilizou em seu desenvolvimento a linguagem Typescript.</p>
 <br>
 
 # Instalação
@@ -23,6 +23,7 @@
 
 <p><b>Obs:</b> Esta chave só será necessária na hora de instanciar a classe (ou, em outras palavras, "gerar um produto da classe") coinMarketCap e na inserção no header de um API Client.</p>
 
+<br>
 <h3>A aplicação em si</h3>
 
 <h5>0. Primeiramente, é necessário já ter instalado na própria máquina:</h5>
@@ -37,7 +38,6 @@
 git init
 ```
 
-<br>
 <h5>1. Fazer o clone do reposítório Kencrypto na sua máquina pelo terminal do computador ou pelo do IDE:</h5>
 
 ```
@@ -69,7 +69,6 @@ code .
 ```
 
 <br>
-
 <h3>Ou para apenas importar a biblioteca em outra aplicação:</h3>
 
 ```
@@ -92,7 +91,7 @@ yarn dev
 
 <h4>Cotação atual</h4>
 
-<b>Listagem das cotações pedidas para dólar americano (Método GET): <b>/v1/cryptocurrency/quotes/latest?symbol=${</b>symbols<b>}\*</b> (ou https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${symbols})
+Listagem das cotações pedidas para dólar americano (Método GET): <b>/v1/cryptocurrency/quotes/latest?symbol=${</b>symbols*<b>}\</b> (ou https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${symbols\*})
 
 \*preencher com uma ou mais cotações separadas por vírgulas sem espaços.
 
@@ -131,9 +130,9 @@ Status: 200 OK
 
 <h4>Conversão de preços:</h4>
 
-Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${</b>amount<b>}&convert=${</b>convert<b>}&symbol=${</b>symbol<b>}</b>** (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount}&convert=${convert}&symbol=${symbol} \*\*)
+Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${</b>amount**<b>}&convert=${</b>convert**<b>}&symbol=${</b>symbol**<b>}</b> (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount**}&convert=${convert**}&symbol=${symbol**} \*\*)
 
-\*\*Respectivamente, o valor dado, a cotação original e a cotação de conversão.
+\*\*Preencher com espectivamente, o valor para ser cotado, a cotação original e a cotação de conversão.
 
 Exemplo a ser colocado no body da requisição:
 
