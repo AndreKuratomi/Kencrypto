@@ -57,7 +57,7 @@ export default class CoinMarketCap {
   }
 
   async conversions(amount: number, convert: string[], symbol: string) {
-    const requestURL = `/v1/tools/price-conversion?amount=${amount}&convert=${convert}&symbol=${symbol}`;
+    const requestURL = `/v1/tools/price-conversion?amount=${amount}&symbol=${symbol}&convert=${convert}`;
     const response: AxiosResponse<any, any> = await this.axiosInstance.get(
       requestURL
     );
