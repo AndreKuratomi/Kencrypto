@@ -15,6 +15,7 @@
 <p>Esta biblioteca é um serviço simples de listagem da cotação atual de uma moeda e conversão entre cotações. Esta aplicação utilizou em seu desenvolvimento a linguagem Typescript.</p>
 
 <br>
+
 # Instalação
 
 <h3>Criação de chave CoinMarketCap</h3>
@@ -130,7 +131,7 @@ Status: 200 OK
 
 <h4>Conversão de preços:</h4>
 
-Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${</b>amount**<b>}&convert=${</b>convert**<b>}&symbol=${</b>symbol**<b>}</b> (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount**}&convert=${convert**}&symbol=${symbol**})
+Conversão de preços entre cotações (Método GET): <b>/v1/tools/price-conversion?amount=${</b>amount**<b>}&symbol=${</b>symbol**<b>}&convert=${</b>convert**<b>}</b> (ou https://pro-api.coinmarketcap.com/v1/tools/price-conversion?amount=${amount**}&symbol=${symbol**}&convert=${convert**})
 
 \*\* Preencher com, respectivamente, o valor para ser cotado, a cotação original e a cotação de conversão.
 
