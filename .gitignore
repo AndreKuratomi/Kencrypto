@@ -1,1 +1,2 @@
-WHATTODO.md
+node_modules/*
+dist/*
