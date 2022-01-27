@@ -23,29 +23,26 @@ export default class CoinMarketCap {
       requestURL
     );
     // console.log(response.data);
-    // console.log();
-    // "Your parsing code should explicitly parse only the response properties you require to guarantee new fields that may be returned in the future are ignored."
 
-    const currency = symbols;
+    // const currency = symbols;
 
-    // const currency = ["BTC", "NGN"];
-    const obj = {};
+    // const obj = {};
+    // obj["data"] = {};
 
-    obj["data"] = {};
+    // for (let i = 0; i < currency.length; i++) {
+    //   obj.data[currency[i]] = {};
+    //   obj.data[[currency[i]]]["id"] = response.data[currency[i]]["id"];
+    //   obj.data[[currency[i]]]["name"] = response.data[currency[i]]["name"];
+    //   obj.data[[currency[i]]]["symbol"] = response.data[currency[i]]["symbol"];
+    //   obj.data[[currency[i]]]["slug"] = response.data[currency[i]]["slug"];
+    //   obj.data[[currency[i]]]["date_added"] =
+    //     response.data[currency[i]]["date_added"];
+    //   obj.data[[currency[i]]]["last_updated"] =
+    //     response.data[currency[i]]["last_updated"];
+    //   obj.data[[currency[i]]]["quote"] = response.data[currency[i]]["quote"];
+    // }
 
-    for (let i = 0; i < currency.length; i++) {
-      obj.data[currency[i]] = {};
-      obj.data[[currency[i]]]["id"] = response.data[currency[i]]["id"];
-      obj.data[[currency[i]]]["name"] = response.data[currency[i]]["name"];
-      obj.data[[currency[i]]]["symbol"] = response.data[currency[i]]["symbol"];
-      obj.data[[currency[i]]]["slug"] = response.data[currency[i]]["slug"];
-      obj.data[[currency[i]]]["date_added"] =
-        response.data[currency[i]]["date_added"];
-      obj.data[[currency[i]]]["last_updated"] =
-        response.data[currency[i]]["last_updated"];
-      obj.data[[currency[i]]]["quote"] = response.data[currency[i]]["quote"];
-    }
-
+    // return obj as Quotation;
     return response.data as Quotation;
     // try {
     // } catch (err) {
@@ -56,26 +53,39 @@ export default class CoinMarketCap {
     // }
   }
 
-  async conversions(amount: number, symbol: string, convert: string[]) {
-    const requestURL = `/v1/tools/price-conversion?amount=${amount}&symbol=${symbol}&convert=${convert}`;
+  async conversions(amount: number, convert: string[], symbol: string) {
+    const requestURL = `/v1/tools/price-conversion?amount=${amount}&convert=${convert}&symbol=${symbol}`;
     const response: AxiosResponse<any, any> = await this.axiosInstance.get(
       requestURL
     );
 
+    // const elements = [amount, convert, symbol];
+
+    // const obj = {};
+    // obj["data"] = {};
+
+    // for (let elem in response.data) {
+    //   obj.data[elements[i]] = {};
+    //   obj.data[[elements[i]]]["id"] = response.data[elements[i]]["id"];
+    //   obj.data[[elements[i]]]["name"] = response.data[elements[i]]["name"];
+    //   obj.data[[elements[i]]]["symbol"] = response.data[elements[i]]["symbol"];
+    //   obj.data[[elements[i]]]["amount"] = response.data[elements[i]]["amount"];
+    //   obj.data[[elements[i]]]["last_updated"] =
+    //     response.data[elements[i]]["last_updated"];
+    //   obj.data[[elements[i]]]["quote"] = response.data[elements[i]]["quote"];
+    // }
+
     // const newObject = {
-    //   response.data: {
-    //     response.data.$key: {
-    //       response.data.$key.id: 1,
-    //       response.data.$key.name: "Bitcoin",
-    //       response.data.$key.symbol: "BTC",
-    //       response.data.$key.slug: "bitcoin",
-    //       response.data.$key.date_added: "2013-04-28T00:00:00.000Z",
-    //       response.data.$key.last_updated: "2021-08-26T17:44:11.000Z",
-    //       response.data.$key.quote: {
-    //         response.data.$key.quote.$key: {
-    //           response.data.$key.quote.$key.price: 46963.215165006586,
-    //           response.data.$key.quote.$key.last_updated: "2021-08-26T17:44:11.000Z",
-    //         },
+    //   data: {
+    //     id: 1,
+    //     symbol: "BTC",
+    //     name: "Bitcoin",
+    //     amount: 25.67,
+    //     last_updated: "2021-08-26T18:30:17.000Z",
+    //     quote: {
+    //       ETH: {
+    //         price: 386.5352847529818,
+    //         last_updated: "2021-08-26T18:30:16.000Z",
     //       },
     //     },
     //   },

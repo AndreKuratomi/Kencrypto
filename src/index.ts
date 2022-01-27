@@ -17,11 +17,11 @@ newCoin.quotes(["BTC", "NGN"]).then((resp) => {
   //     console.log(resp.data);
   //   }
   // }
-  console.log(resp.data);
+  // console.log(resp.data);
   // tentar passar para arquivo JSON
 });
 
-newCoin.conversions(1000, "NGN", ["NZD"]).then((resp) => {
+newCoin.conversions(1000, ["GBP"], "NZD").then((resp) => {
   // if (resp !== undefined) {
   //   if (isError404(resp)) {
   //     resp.status;
