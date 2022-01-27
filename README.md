@@ -1,4 +1,4 @@
-## REFATORAÇÃO CÓDIGO FONTE
+## KENCRYPTO
 
 - [Descrição](#descrição)
 - [Instalação](#instalação)
