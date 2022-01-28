@@ -71,7 +71,7 @@ code .
 <h3>Ou para apenas importar a biblioteca em outra aplicação:</h3>
 
 ```
-npm i kencrypto
+npm i kencrypto2
 ```
 
 <br>
