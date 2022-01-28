@@ -1,7 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import Quotes from "../types/quotes.types";
 import Conversion from "../types/conversions.types";
-import { isError404 } from "../types/errors.types";
 import Error from "../types/errors.types";
 
 export default class CoinMarketCap {
@@ -22,11 +21,11 @@ export default class CoinMarketCap {
   async quotes(symbols: string[]) {
     const requestURL = `/v1/cryptocurrency/quotes/latest?symbol=${symbols}`;
 
-    const response: AxiosResponse<any, any> = await this.axiosInstance.get(
-      requestURL
-    );
-
     try {
+      const response: AxiosResponse<any, any> = await this.axiosInstance.get(
+        requestURL
+      );
+
       const currency: string[] = symbols;
 
       const obj: any = {};
@@ -52,23 +51,22 @@ export default class CoinMarketCap {
       if (axios.isAxiosError(err)) {
         return err.response?.data as Error;
       }
-      return undefined;
+      return { error: err };
     }
   }
 
   async conversions(amount: number, convert: string[], symbol: string) {
     const requestURL = `/v1/tools/price-conversion?amount=${amount}&symbol=${symbol}&convert=${convert}`;
-    const response: AxiosResponse<any, any> = await this.axiosInstance.get(
-      requestURL
-    );
-
     try {
-      return response.data as Conversion;
+      const response: AxiosResponse<any, any> = await this.axiosInstance.get(
+        requestURL
+      );
+
+      return response.data.data as Conversion;
     } catch (err) {
       if (axios.isAxiosError(err)) {
         return err.response?.data as Error;
       }
-      return undefined;
     }
   }
 }
